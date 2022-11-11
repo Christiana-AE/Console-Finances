@@ -99,9 +99,11 @@ console.log("Total Months: " + finances.length);
 
 //Calculate net total of Profit / Losses over the entire period;
 var sum = 0; 
+for (var i = 0; i < finances.length; i++){
+    sum = sum + finances[i][1];
+}
+console.log("Total: " + sum);
 
-
-console.log("Total: ");
 
 // Calculate Average of the changes in Profit / Losses over the entire period
 console.log("Average change: ");
