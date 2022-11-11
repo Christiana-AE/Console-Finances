@@ -89,7 +89,7 @@ var finances = [
 
 
 
-// Calculations 
+// Calculations --------------------------------------------
 
 console.log("Financial Analysis");
 console.log("-----------------------------------------");
@@ -106,10 +106,21 @@ console.log("Total: " + sum);
 
 
 // Calculate Average of the changes in Profit / Losses over the entire period
-console.log("Average change: ");
+var total = 0
+
+for (var i = 1; i < finances.length; i++){
+    total = total + (finances[i][1] - finances[i-1][1]);
+}
+var Number_of_months = finances.length;
+var average = total / Number_of_months;
+
+console.log("Average change: " + average.toFixed(2));
+
 
 //Greatest increase in profits (date and amount over entire period)
 console.log("Greatest Increase in Profits: ");
+
+
 
 //Greatest decrease in profits (date and amount over entire period)
 console.log("Greatest Decrease in Profits: ");
